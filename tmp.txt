@@ -25,11 +25,13 @@ max: 2721
 
 freelist
 *************************
-       size(size_t)
+    block size(size_t)      [0]
 *************************
-      next(size_t *)
+    data size(size_t)       [1]
 *************************
-          data
+      next(size_t *)        [2]
+*************************
+          data              [3] <- return value
 *************************
 
 backup

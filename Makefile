@@ -13,6 +13,7 @@ test: replay
 	@$(NM) -u ./$< | sed -ne 's/\s*U \([^@]*\).*/\t\1/p'
 	$(call run_test,./$<,test1,1)
 	$(call run_test,./$<,test2,1)
+	$(call run_test,./$<,test4,1)
 	$(call run_test,./$<,test3,1)
 
 replay: alloc.c main.c printf.c
