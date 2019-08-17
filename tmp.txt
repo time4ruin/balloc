@@ -1,0 +1,39 @@
+<test1.out>
+
+alloc(552): 0000000000FCC000
+max: 552
+alloc(120): 0000000000FCC228
+max: 672
+alloc(1024): 0000000000FCC2A0
+max: 1696
+free(0000000000FCC228)
+free(0000000000FCC2A0)
+free(0000000000FCC000)
+free(0000000000000000)
+alloc(5): 0000000000FCC6A0
+max: 1701
+free(0000000000FCC6A0)
+alloc(120): 0000000000FCC6A5
+max: 1821
+alloc(12): 0000000000FCC71D
+max: 1833
+alloc(776): 0000000000FCC729
+max: 2609
+alloc(112): 0000000000FCCA31
+max: 2721
+
+
+freelist
+*************************
+       size(size_t)
+*************************
+      next(size_t *)
+*************************
+          data
+*************************
+
+backup
+
+    $(call run_test,./$<,test1,1000)
+	$(call run_test,./$<,test2,1000)
+	$(call run_test,./$<,test3,20)
