@@ -31,8 +31,12 @@ freelist
 *************************
       next(size_t *)        [2]
 *************************
-          data              [3] <- return value
+        data/block          [3] <- return value
 *************************
+    block size(size_t)      [block_size + dataoffset] <- for coaslescing
+#########################
+
+block size : size when that block is first "sbrk()"ed
 
 backup
 

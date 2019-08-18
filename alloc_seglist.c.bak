@@ -1,0 +1,267 @@
+/* Implemented by Segregated List */
+
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+
+extern void debug(const char *fmt, ...);
+extern void *sbrk(intptr_t increment);
+void check_seglist();
+void insert_seglist(size_t *tmp);
+void coalesce(size_t *ptr);
+
+unsigned int max_size;
+size_t *seglist[19];
+size_t seglist_num = 19;
+size_t seglist_size[18] = {
+    8, 16, 32, 64, 128, 256, 512, 1024, 2000,
+    4000, 8000, 16000, 32000, 64000, 128000, 256000, 512000, 1024000
+}; //list 0~17 max size declared, list 18 not declared
+/*
+TOTAL SIZE = BLOCKSIZE + 24
+             BLOCKSIZE 
+SEGLIST 0 :     ~8
+SEGLIST 1 :     ~16
+SEGLIST 2 :     ~32
+SEGLIST 3 :     ~64
+SEGLIST 4 :     ~128
+SEGLIST 5 :     ~256
+SEGLIST 6 :     ~512
+SEGLIST 7 :     ~1024
+SEGLIST 8 :     ~2^11
+SEGLIST 9 :     ~2^12
+SEGLIST 10:     ~2^13
+SEGLIST 11:     ~2^14
+SEGLIST 12:     ~2^15
+SEGLIST 13:     ~2^16(65536)
+SEGLIST 14:     ~2^17
+SEGLIST 15:     ~2^18
+SEGLIST 16:     ~2^19
+SEGLIST 17:     ~2^20
+SEGLIST 18:     2^20++
+*/
+size_t dataoffset = sizeof(size_t *) + 2 * sizeof(size_t); 
+//(block size)8byte + (data size)data8byte + (next)8byte
+
+void *myalloc(size_t size)
+{
+    //debug("malloc\n");
+    void *p;
+    size_t new_size = size + dataoffset;
+    //search seglist
+    int n = 0;
+    if (size > seglist_size[seglist_num - 2]){
+        n = seglist_num - 1;
+    }
+    else {
+        for (; n < seglist_num; n++){
+            if (size <= seglist_size[n]){
+                break;
+            }
+        }
+    }
+    //debug("find size %d-%d\n",seglist_size[n-1], seglist_size[n]);
+    size_t *free_ptr = seglist[n];
+    size_t *before = free_ptr;
+    size_t *found = NULL;
+    int f_split = 0;
+    while (free_ptr != NULL){ //first fit from ascending order
+        if (free_ptr[0] >= size){ //compare block size
+            found = free_ptr;
+            if (free_ptr[0] >= size + 32) f_split = 1; //size difference >= 8 + 24(header)
+            break;
+        }
+        before = free_ptr;
+        free_ptr = (size_t *)free_ptr[2];
+    }
+    //not found -> search bigger seglist
+    //debug("n(%d), found(%p)\n", n, found);
+    while ((found == NULL) && (++n < seglist_num - 1)){
+        free_ptr = seglist[n];
+        before = free_ptr;
+        while (free_ptr != NULL){ //first fit from ascending order
+            if (free_ptr[0] >= size + 32){ //size difference >= 8 + 24(header)
+                found = free_ptr;
+                f_split = 1;
+                break;
+            }
+            before = free_ptr;
+            free_ptr = (size_t *)free_ptr[2];
+        }
+    }
+    if (found != NULL){ //found matching space
+        if (before == free_ptr){ //delete at front
+            seglist[n] = (size_t *)found[2];
+        }
+        else { //delete at somewhere
+            before[2] = (size_t *)found[2];
+        }
+        found[1] = size;
+        p = &found[3];
+
+        if (f_split == 1){
+            //split space
+            size_t *remaining = (unsigned char *)found + new_size;
+            remaining[0] = found[0] - new_size;
+            //debug("remain(%p), found(%p), remainingsize(%u)\n",remaining, found, remaining[0]);
+            //insert remaining to seglist
+            insert_seglist(remaining);
+
+            //Coalesce(remaining);
+
+            found[0] = size;
+        }
+        //debug("[+] alloc_list(%u/%u): base(%p), data(%p)\n", found[1], found[0], found, p);
+    }
+    else { //no seglist space
+        p = sbrk(new_size);
+        size_t *new_p = p;
+        new_p[0] = size; //block size
+        new_p[1] = size; //data size
+        new_p[2] = NULL; //next
+        p = &new_p[3];
+        max_size += new_size;
+        //debug("[+] alloc_new(%u): base(%p), data(%p)\n", (unsigned int)size, new_p, p);
+    }
+    //debug("    max: %u\n", max_size);
+    //check_seglist();
+    return p;
+}
+
+void *myrealloc(void *ptr, size_t size)
+{
+    //debug("realloc(%p, %u)\n", ptr, size);
+    if (ptr == NULL && size == 0)  //realloc(NULL, 0);
+        return 0;
+    if (ptr == NULL && size != 0)  //realloc(NULL, size);
+        return myalloc(size);
+
+    void *p; //return value
+    size_t new_size = size + dataoffset;
+    //search seglist
+    size_t *new_ptr = (size_t *)ptr - 3;
+    //if (ptr) debug("realloc ptr(%p, %u/%u) size(%u)\n", ptr, new_ptr[1], new_ptr[0], size); //new_ptr-2 : data size
+    
+    if (ptr != NULL && size == 0){ //realloc(ptr, 0)
+        //debug("[+] realloc(ptr, 0) -> ");
+        myfree(ptr);
+        return 0;   
+    }
+    
+    if ((new_ptr[0] > size) && (new_ptr[0] - size < 32)){ 
+        //smaller , block size difference < 32: just use same space
+        new_ptr[1] = size;
+        return &new_ptr[3];
+    }
+    else if((new_ptr[0] > size) && (new_ptr[0] - size >= 32)){ 
+        //smaller , block size difference >= 32: split space
+        size_t *remaining = (unsigned char *)new_ptr + new_size;
+        remaining[0] = new_ptr[0] - new_size;
+        //debug("remain(%p), size(%u/%u), next(%p)\n", remaining, remaining[1], remaining[0], remaining[2]);
+        //debug("new_ptr(%p), size(%u/%u), next(%p)\n", new_ptr, new_ptr[1], new_ptr[0], new_ptr[2]);
+
+        //insert remaining to seglist
+
+        insert_seglist(remaining);
+
+        //Coalesce(remaining);
+        new_ptr[0] = size;
+        new_ptr[1] = size;
+        return &new_ptr[3];
+    }
+    else { //bigger: free and get new space
+        //debug("[+] realloc_new -> ");
+        myfree(ptr);
+        //debug("[+] realloc_new -> ");
+        return myalloc(size);
+    }
+}
+
+void myfree(void *ptr) //ptr: pointing `data`
+{
+    //debug("[+] free(%p)\n", ptr);
+    if (ptr == NULL) return;
+    size_t *tmp = ptr; 
+    tmp = tmp - 3; // point [0]:block size
+    //debug("    base(%p), data(%u/%u)\n", tmp, tmp[1], tmp[0]);
+    insert_seglist(tmp);
+
+    //Coalesce(tmp);
+
+    //check_seglist();
+}
+
+void check_seglist(){
+    //return;
+    size_t *tmp;
+    for (int n = 0; n < seglist_num; n++){
+        int i = 1;
+        tmp = seglist[n];
+        if (tmp == NULL) continue;
+        if (n < seglist_num - 1) debug("    SEGLIST %d(~%d):\n", n, seglist_size[n]);
+        else debug("    SEGLIST %d(%d~):\n", n, seglist_size[n-1]);
+        while (tmp != NULL){
+            debug("      ->list %d: addr(%p), block size(%u), next(%p)\n", i, tmp, tmp[0], tmp[2]);
+            tmp = tmp[2];
+            i++;
+        }
+    }
+}
+
+void insert_seglist(size_t *tmp){ //tmp pointing the header
+    //find matching seglist
+    int n = 0;
+    if (tmp[0] > seglist_size[seglist_num - 2]){
+        n = seglist_num - 1;
+    }
+    else {
+        for (; n < seglist_num; n++){
+            if (tmp[0] <= seglist_size[n]){
+                break;
+            }
+        }
+    }
+    //debug("insert ptr(%p), size(%u), n(%d)", tmp, tmp[0], n);
+    size_t *free_ptr = seglist[n];
+    size_t *before = free_ptr;
+    tmp[1] = 0; //data size -> 0
+    if (free_ptr == NULL){ //when list is null
+        tmp[2] = NULL;
+        seglist[n] = tmp;
+    }
+    else {
+        while(free_ptr != NULL){
+            if (free_ptr[0] >= tmp[0]) break; //compare block size
+            //make ascending ordered list
+            before = free_ptr;
+            free_ptr = (size_t *)free_ptr[2];
+        }
+
+        //insert at right place
+        tmp[2] = free_ptr;
+        if (before == free_ptr){ //insert at front
+            seglist[n] = tmp;
+        }
+        else { //insert at somewhere
+            before[2] = tmp;
+        }
+    }
+}
+
+void coalesce(size_t *ptr){
+
+}
+/*
+
+seglist
+*************************
+    block size(size_t)      [0]
+*************************
+    data size(size_t)       [1]
+*************************
+      next(size_t *)        [2]
+*************************
+        data/block          [3] <- return value
+*************************
+
+*/
