@@ -162,13 +162,13 @@ void *myrealloc(void *ptr, size_t size)
         return 0;   
     }
     
-    if ((new_ptr[0] > size) && (new_ptr[0] - size < hdrsize + prevsize + 8)){ 
-        //smaller , block size difference < 40: just use same space
+    if ((new_ptr[0] > size) && (new_ptr[0] - size < 32)){ 
+        //smaller , block size difference < 32: just use same space
         new_ptr[1] = size;
         return &new_ptr[3];
     }
-    else if((new_ptr[0] > size) && (new_ptr[0] - size >= hdrsize + prevsize + 8)){ 
-        //smaller , block size difference >= 40: split space
+    else if((new_ptr[0] > size) && (new_ptr[0] - size >= 32)){ 
+        //smaller , block size difference >= 32: split space
         size_t *remaining = (unsigned char *)new_ptr + new_size;
         remaining[0] = new_ptr[0] - new_size;
         *(size_t *)((unsigned char *)remaining + remaining[0] + hdrsize) = remaining[0];
