@@ -11,10 +11,10 @@ endef
 test: replay
 	@echo "Imports (Do not use any that are not in whitelist!)"
 	@$(NM) -u ./$< | sed -ne 's/\s*U \([^@]*\).*/\t\1/p'
-	$(call run_test,./$<,test1,1)
-	$(call run_test,./$<,test2,1)
-	$(call run_test,./$<,test3,1)
-	$(call run_test,./$<,test4,1)
+	$(call run_test,./$<,test1,1000)
+	$(call run_test,./$<,test2,1000)
+	$(call run_test,./$<,test3,20)
+	$(call run_test,./$<,test4,10)
 
 replay: alloc.c main.c printf.c
 	$(CC) $(CFLAGS) -o $@ $^

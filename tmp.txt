@@ -37,3 +37,16 @@ freelist
 #########################
 
 block size : size when that block is first "sbrk()"ed
+
+Running test1 x 1000
+        User time: 0.032057 seconds
+        Max RSS: 70800 kilobytes
+Running test2 x 1000
+        User time: 0.024426 seconds
+        Max RSS: 144192 kilobytes
+Running test3 x 20
+        User time: 0.020015 seconds
+        Max RSS: 398188 kilobytes
+Running test4 x 10
+        User time: 0.019937 seconds
+        Max RSS: 1390748 kilobytes
