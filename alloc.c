@@ -40,14 +40,16 @@ SEGLIST 16:     ~2^19
 SEGLIST 17:     ~2^20
 SEGLIST 18:     2^20++
 */
-size_t dataoffset = sizeof(size_t *) + 2 * sizeof(size_t); 
-//(block size)8byte + (data size)data8byte + (next)8byte
+size_t hdrsize = sizeof(size_t *) + 2 * sizeof(size_t); 
+size_t prevsize = sizeof(size_t);
+size_t heapbase = 0;
+//(block size)8byte + (data size)8byte + (next)8byte
 
 void *myalloc(size_t size)
 {
     //debug("malloc\n");
     void *p;
-    size_t new_size = size + dataoffset;
+    size_t new_size = size + hdrsize + prevsize;
     //search seglist
     int n = 0;
     if (size > seglist_size[seglist_num - 2]){
@@ -103,13 +105,13 @@ void *myalloc(size_t size)
             //split space
             size_t *remaining = (unsigned char *)found + new_size;
             remaining[0] = found[0] - new_size;
+            *(size_t *)((unsigned char *)remaining + remaining[0] + hdrsize) = remaining[0];
             //debug("remain(%p), found(%p), remainingsize(%u)\n",remaining, found, remaining[0]);
             //insert remaining to seglist
             insert_seglist(remaining);
 
-            //Coalesce(remaining);
-
             found[0] = size;
+            *(size_t *)((unsigned char *)found + found[0] + hdrsize) = found[0];
         }
         debug("[+] alloc_list(%u/%u): base(%p), data(%p)\n", found[1], found[0], found, p);
     }
@@ -119,12 +121,15 @@ void *myalloc(size_t size)
         new_p[0] = size; //block size
         new_p[1] = size; //data size
         new_p[2] = NULL; //next
+        *(size_t *)((unsigned char *)new_p + new_p[0] + hdrsize) = new_p[0];
+        debug("%u, %u", new_p[0], *(size_t *)((unsigned char *)new_p + new_p[0] + hdrsize));
+        if (heapbase == 0) heapbase = p;
         p = &new_p[3];
         max_size += new_size;
         debug("[+] alloc_new(%u): base(%p), data(%p)\n", (unsigned int)size, new_p, p);
     }
-    //debug("    max: %u\n", max_size);
-    //check_seglist();
+    debug("    max: %u\n", max_size);
+    check_seglist();
     return p;
 }
 
@@ -137,7 +142,7 @@ void *myrealloc(void *ptr, size_t size)
         return myalloc(size);
 
     void *p; //return value
-    size_t new_size = size + dataoffset;
+    size_t new_size = size + hdrsize + prevsize;
     //search seglist
     size_t *new_ptr = (size_t *)ptr - 3;
     if (ptr) debug("[+] realloc ptr(%p, %u/%u) size(%u)\n", ptr, new_ptr[1], new_ptr[0], size); //new_ptr-2 : data size
@@ -157,6 +162,7 @@ void *myrealloc(void *ptr, size_t size)
         //smaller , block size difference >= 32: split space
         size_t *remaining = (unsigned char *)new_ptr + new_size;
         remaining[0] = new_ptr[0] - new_size;
+        *(size_t *)((unsigned char *)remaining + remaining[0] + hdrsize) = remaining[0];
         //debug("remain(%p), size(%u/%u), next(%p)\n", remaining, remaining[1], remaining[0], remaining[2]);
         //debug("new_ptr(%p), size(%u/%u), next(%p)\n", new_ptr, new_ptr[1], new_ptr[0], new_ptr[2]);
 
@@ -164,9 +170,9 @@ void *myrealloc(void *ptr, size_t size)
 
         insert_seglist(remaining);
 
-        //Coalesce(remaining);
         new_ptr[0] = size;
         new_ptr[1] = size;
+        *(size_t *)((unsigned char *)new_ptr + new_ptr[0] + hdrsize) = new_ptr[0];
         return &new_ptr[3];
     }
     else { //bigger: free and get new space
@@ -188,7 +194,7 @@ void myfree(void *ptr) //ptr: pointing `data`
 
     //Coalesce(tmp);
 
-    //check_seglist();
+    check_seglist();
 }
 
 void check_seglist(){
@@ -201,7 +207,7 @@ void check_seglist(){
         if (n < seglist_num - 1) debug("    SEGLIST %d(~%d):\n", n, seglist_size[n]);
         else debug("    SEGLIST %d(%d~):\n", n, seglist_size[n-1]);
         while (tmp != NULL){
-            debug("      ->list %d: addr(%p), block size(%u), next(%p)\n", i, tmp, tmp[0], tmp[2]);
+            debug("      ->list %d: addr(%p), block size(%u), next(%p), block size2(%u)\n", i, tmp, tmp[0], tmp[2], *(size_t *)((unsigned char *)tmp + tmp[0] + hdrsize));
             tmp = tmp[2];
             i++;
         }
@@ -246,9 +252,17 @@ void insert_seglist(size_t *tmp){ //tmp pointing the header
             before[2] = tmp;
         }
     }
+    coalesce(tmp);
 }
 
 void coalesce(size_t *ptr){
+    debug("my size(%u)", ptr[0]);
+    if (ptr == heapbase) goto COALNEXT;
+    size_t sizetmp = *(ptr - 1);
+    debug("prev size(%u)", sizetmp);
+    size_t *prev;
+
+COALNEXT:
 
 }
 /*
@@ -263,5 +277,7 @@ seglist
 *************************
         data/block          [3] <- return value
 *************************
+    block size(size_t)      [block_size + dataoffset] <- for coaslescing
+#########################
 
 */

@@ -1,188 +1,1117 @@
-[+] alloc_new(552): base(0000556685B07000), data(0000556685B07018)
-[+] free(0000556685B07018)
-[+] alloc_list(552/552): base(0000556685B07000), data(0000556685B07018)
-[+] alloc_new(120): base(0000556685B07240), data(0000556685B07258)
-[+] alloc_new(1024): base(0000556685B072D0), data(0000556685B072E8)
-[+] free(0000556685B07258)
-[+] free(0000556685B072E8)
-[+] free(0000556685B07018)
+552, 552[+] alloc_new(552): base(0000000002609000), data(0000000002609018)
+    max: 584
+[+] free(0000000002609018)
+my size(552)hi    SEGLIST 7(~1024):
+      ->list 1: addr(0000000002609000), block size(552), next(0000000000000000), block size2(552)
+[+] alloc_list(552/552): base(0000000002609000), data(0000000002609018)
+    max: 584
+120, 120[+] alloc_new(120): base(0000000002609248), data(0000000002609260)
+    max: 736
+1024, 1024[+] alloc_new(1024): base(00000000026092E0), data(00000000026092F8)
+    max: 1792
+[+] free(0000000002609260)
+my size(120)prev size(552)    SEGLIST 4(~128):
+      ->list 1: addr(0000000002609248), block size(120), next(0000000000000000), block size2(120)
+[+] free(00000000026092F8)
+my size(1024)prev size(120)    SEGLIST 4(~128):
+      ->list 1: addr(0000000002609248), block size(120), next(0000000000000000), block size2(120)
+    SEGLIST 7(~1024):
+      ->list 1: addr(00000000026092E0), block size(1024), next(0000000000000000), block size2(1024)
+[+] free(0000000002609018)
+my size(552)hi    SEGLIST 4(~128):
+      ->list 1: addr(0000000002609248), block size(120), next(0000000000000000), block size2(120)
+    SEGLIST 7(~1024):
+      ->list 1: addr(0000000002609000), block size(552), next(00000000026092E0), block size2(552)
+      ->list 2: addr(00000000026092E0), block size(1024), next(0000000000000000), block size2(1024)
 [+] free(0000000000000000)
-[+] alloc_list(5/5): base(0000556685B07240), data(0000556685B07258)
-[+] free(0000556685B07258)
-[+] alloc_list(120/120): base(0000556685B07000), data(0000556685B07018)
-[+] alloc_list(12/12): base(0000556685B0725D), data(0000556685B07275)
-[+] alloc_list(776/776): base(0000556685B072D0), data(0000556685B072E8)
-[+] alloc_list(112/112): base(0000556685B075F0), data(0000556685B07608)
-[+] alloc_new(1336): base(0000556685B076E8), data(0000556685B07700)
-[+] alloc_list(216/216): base(0000556685B07090), data(0000556685B070A8)
-[+] alloc_new(432): base(0000556685B07C38), data(0000556685B07C50)
-[+] alloc_list(104/104): base(0000556685B07180), data(0000556685B07198)
-[+] alloc_list(88/88): base(0000556685B07678), data(0000556685B07690)
-[+] alloc_new(120): base(0000556685B07E00), data(0000556685B07E18)
-[+] alloc_new(168): base(0000556685B07E90), data(0000556685B07EA8)
-[+] alloc_new(104): base(0000556685B07F50), data(0000556685B07F68)
-[+] alloc_new(80): base(0000556685B07FD0), data(0000556685B07FE8)
-[+] alloc_new(192): base(0000556685B08038), data(0000556685B08050)
-[+] alloc_list(12/12): base(0000556685B07281), data(0000556685B07299)
-[+] alloc_new(12): base(0000556685B08110), data(0000556685B08128)
-[+] alloc_new(12): base(0000556685B08134), data(0000556685B0814C)
-[+] alloc_new(12): base(0000556685B08158), data(0000556685B08170)
-[+] alloc_new(12): base(0000556685B0817C), data(0000556685B08194)
-[+] alloc_new(12): base(0000556685B081A0), data(0000556685B081B8)
-[+] alloc_new(12): base(0000556685B081C4), data(0000556685B081DC)
-[+] alloc_new(12): base(0000556685B081E8), data(0000556685B08200)
-[+] alloc_new(12): base(0000556685B0820C), data(0000556685B08224)
-[+] alloc_new(12): base(0000556685B08230), data(0000556685B08248)
-[+] alloc_new(12): base(0000556685B08254), data(0000556685B0826C)
-[+] alloc_new(12): base(0000556685B08278), data(0000556685B08290)
-[+] alloc_new(12): base(0000556685B0829C), data(0000556685B082B4)
+my size(83)prev size(1094795585)[+] alloc_list(5/5): base(0000000002609248), data(0000000002609260)
+    max: 1792
+    SEGLIST 4(~128):
+      ->list 1: addr(000000000260926D), block size(83), next(0000000000000000), block size2(83)
+    SEGLIST 7(~1024):
+      ->list 1: addr(0000000002609000), block size(552), next(00000000026092E0), block size2(552)
+      ->list 2: addr(00000000026092E0), block size(1024), next(0000000000000000), block size2(1024)
+[+] free(0000000002609260)
+my size(5)prev size(552)    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 4(~128):
+      ->list 1: addr(000000000260926D), block size(83), next(0000000000000000), block size2(83)
+    SEGLIST 7(~1024):
+      ->list 1: addr(0000000002609000), block size(552), next(00000000026092E0), block size2(552)
+      ->list 2: addr(00000000026092E0), block size(1024), next(0000000000000000), block size2(1024)
+my size(400)prev size(1094795585)[+] alloc_list(120/120): base(0000000002609000), data(0000000002609018)
+    max: 1792
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 4(~128):
+      ->list 1: addr(000000000260926D), block size(83), next(0000000000000000), block size2(83)
+    SEGLIST 6(~512):
+      ->list 1: addr(0000000002609098), block size(400), next(0000000000000000), block size2(400)
+    SEGLIST 7(~1024):
+      ->list 1: addr(00000000026092E0), block size(1024), next(0000000000000000), block size2(1024)
+my size(39)prev size(1094795585)[+] alloc_list(12/12): base(000000000260926D), data(0000000002609285)
+    max: 1792
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+    SEGLIST 6(~512):
+      ->list 1: addr(0000000002609098), block size(400), next(0000000000000000), block size2(400)
+    SEGLIST 7(~1024):
+      ->list 1: addr(00000000026092E0), block size(1024), next(0000000000000000), block size2(1024)
+my size(216)prev size(1094795585)[+] alloc_list(776/776): base(00000000026092E0), data(00000000026092F8)
+    max: 1792
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+    SEGLIST 5(~256):
+      ->list 1: addr(0000000002609608), block size(216), next(0000000000000000), block size2(216)
+    SEGLIST 6(~512):
+      ->list 1: addr(0000000002609098), block size(400), next(0000000000000000), block size2(400)
+my size(72)prev size(1094795585)[+] alloc_list(112/112): base(0000000002609608), data(0000000002609620)
+    max: 1792
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+    SEGLIST 4(~128):
+      ->list 1: addr(0000000002609698), block size(72), next(0000000000000000), block size2(72)
+    SEGLIST 6(~512):
+      ->list 1: addr(0000000002609098), block size(400), next(0000000000000000), block size2(400)
+1336, 1336[+] alloc_new(1336): base(0000000002609700), data(0000000002609718)
+    max: 3160
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+    SEGLIST 4(~128):
+      ->list 1: addr(0000000002609698), block size(72), next(0000000000000000), block size2(72)
+    SEGLIST 6(~512):
+      ->list 1: addr(0000000002609098), block size(400), next(0000000000000000), block size2(400)
+my size(152)prev size(1094795585)[+] alloc_list(216/216): base(0000000002609098), data(00000000026090B0)
+    max: 3160
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+    SEGLIST 4(~128):
+      ->list 1: addr(0000000002609698), block size(72), next(0000000000000000), block size2(72)
+    SEGLIST 5(~256):
+      ->list 1: addr(0000000002609190), block size(152), next(0000000000000000), block size2(152)
+432, 432[+] alloc_new(432): base(0000000002609C58), data(0000000002609C70)
+    max: 3624
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+    SEGLIST 4(~128):
+      ->list 1: addr(0000000002609698), block size(72), next(0000000000000000), block size2(72)
+    SEGLIST 5(~256):
+      ->list 1: addr(0000000002609190), block size(152), next(0000000000000000), block size2(152)
+my size(16)prev size(1094795585)[+] alloc_list(104/104): base(0000000002609190), data(00000000026091A8)
+    max: 3624
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 1(~16):
+      ->list 1: addr(0000000002609218), block size(16), next(0000000000000000), block size2(16)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+    SEGLIST 4(~128):
+      ->list 1: addr(0000000002609698), block size(72), next(0000000000000000), block size2(72)
+88, 88[+] alloc_new(88): base(0000000002609E28), data(0000000002609E40)
+    max: 3744
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 1(~16):
+      ->list 1: addr(0000000002609218), block size(16), next(0000000000000000), block size2(16)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+    SEGLIST 4(~128):
+      ->list 1: addr(0000000002609698), block size(72), next(0000000000000000), block size2(72)
+120, 120[+] alloc_new(120): base(0000000002609EA0), data(0000000002609EB8)
+    max: 3896
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 1(~16):
+      ->list 1: addr(0000000002609218), block size(16), next(0000000000000000), block size2(16)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+    SEGLIST 4(~128):
+      ->list 1: addr(0000000002609698), block size(72), next(0000000000000000), block size2(72)
+168, 168[+] alloc_new(168): base(0000000002609F38), data(0000000002609F50)
+    max: 4096
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 1(~16):
+      ->list 1: addr(0000000002609218), block size(16), next(0000000000000000), block size2(16)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+    SEGLIST 4(~128):
+      ->list 1: addr(0000000002609698), block size(72), next(0000000000000000), block size2(72)
+104, 104[+] alloc_new(104): base(000000000260A000), data(000000000260A018)
+    max: 4232
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 1(~16):
+      ->list 1: addr(0000000002609218), block size(16), next(0000000000000000), block size2(16)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+    SEGLIST 4(~128):
+      ->list 1: addr(0000000002609698), block size(72), next(0000000000000000), block size2(72)
+80, 80[+] alloc_new(80): base(000000000260A088), data(000000000260A0A0)
+    max: 4344
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 1(~16):
+      ->list 1: addr(0000000002609218), block size(16), next(0000000000000000), block size2(16)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+    SEGLIST 4(~128):
+      ->list 1: addr(0000000002609698), block size(72), next(0000000000000000), block size2(72)
+192, 192[+] alloc_new(192): base(000000000260A0F8), data(000000000260A110)
+    max: 4568
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 1(~16):
+      ->list 1: addr(0000000002609218), block size(16), next(0000000000000000), block size2(16)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+    SEGLIST 4(~128):
+      ->list 1: addr(0000000002609698), block size(72), next(0000000000000000), block size2(72)
+[+] alloc_list(12/16): base(0000000002609218), data(0000000002609230)
+    max: 4568
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+    SEGLIST 4(~128):
+      ->list 1: addr(0000000002609698), block size(72), next(0000000000000000), block size2(72)
+my size(28)prev size(1094795585)[+] alloc_list(12/12): base(0000000002609698), data(00000000026096B0)
+    max: 4568
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+12, 12[+] alloc_new(12): base(000000000260A1D8), data(000000000260A1F0)
+    max: 4612
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+12, 12[+] alloc_new(12): base(000000000260A204), data(000000000260A21C)
+    max: 4656
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+12, 12[+] alloc_new(12): base(000000000260A230), data(000000000260A248)
+    max: 4700
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+12, 12[+] alloc_new(12): base(000000000260A25C), data(000000000260A274)
+    max: 4744
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+12, 12[+] alloc_new(12): base(000000000260A288), data(000000000260A2A0)
+    max: 4788
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+12, 12[+] alloc_new(12): base(000000000260A2B4), data(000000000260A2CC)
+    max: 4832
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+12, 12[+] alloc_new(12): base(000000000260A2E0), data(000000000260A2F8)
+    max: 4876
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+12, 12[+] alloc_new(12): base(000000000260A30C), data(000000000260A324)
+    max: 4920
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+12, 12[+] alloc_new(12): base(000000000260A338), data(000000000260A350)
+    max: 4964
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+12, 12[+] alloc_new(12): base(000000000260A364), data(000000000260A37C)
+    max: 5008
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
+12, 12[+] alloc_new(12): base(000000000260A390), data(000000000260A3A8)
+    max: 5052
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+    SEGLIST 3(~64):
+      ->list 1: addr(0000000002609299), block size(39), next(0000000000000000), block size2(39)
 [+] free(0000000000000000)
 [+] free(0000000000000000)
-[+] alloc_list(34/40): base(0000556685B07200), data(0000556685B07218)
-[+] alloc_new(10): base(0000556685B082C0), data(0000556685B082D8)
-[+] alloc_new(56): base(0000556685B082E2), data(0000556685B082FA)
-[+] alloc_new(56): base(0000556685B08332), data(0000556685B0834A)
-[+] alloc_new(1506): base(0000556685B08382), data(0000556685B0839A)
-[+] alloc_new(40): base(0000556685B0897C), data(0000556685B08994)
-[+] alloc_new(40): base(0000556685B089BC), data(0000556685B089D4)
-[+] alloc_new(40): base(0000556685B089FC), data(0000556685B08A14)
-[+] alloc_new(40): base(0000556685B08A3C), data(0000556685B08A54)
-[+] alloc_new(40): base(0000556685B08A7C), data(0000556685B08A94)
-[+] alloc_new(40): base(0000556685B08ABC), data(0000556685B08AD4)
-[+] alloc_new(40): base(0000556685B08AFC), data(0000556685B08B14)
-[+] alloc_new(40): base(0000556685B08B3C), data(0000556685B08B54)
-[+] alloc_new(40): base(0000556685B08B7C), data(0000556685B08B94)
-[+] alloc_new(40): base(0000556685B08BBC), data(0000556685B08BD4)
-[+] alloc_new(40): base(0000556685B08BFC), data(0000556685B08C14)
-[+] alloc_new(40): base(0000556685B08C3C), data(0000556685B08C54)
-[+] alloc_new(40): base(0000556685B08C7C), data(0000556685B08C94)
-[+] alloc_new(40): base(0000556685B08CBC), data(0000556685B08CD4)
-[+] alloc_new(40): base(0000556685B08CFC), data(0000556685B08D14)
-[+] alloc_new(40): base(0000556685B08D3C), data(0000556685B08D54)
-[+] alloc_new(40): base(0000556685B08D7C), data(0000556685B08D94)
-[+] alloc_new(40): base(0000556685B08DBC), data(0000556685B08DD4)
-[+] alloc_new(40): base(0000556685B08DFC), data(0000556685B08E14)
-[+] alloc_new(40): base(0000556685B08E3C), data(0000556685B08E54)
-[+] alloc_new(40): base(0000556685B08E7C), data(0000556685B08E94)
-[+] alloc_new(40): base(0000556685B08EBC), data(0000556685B08ED4)
-[+] alloc_new(40): base(0000556685B08EFC), data(0000556685B08F14)
-[+] alloc_new(40): base(0000556685B08F3C), data(0000556685B08F54)
-[+] alloc_new(40): base(0000556685B08F7C), data(0000556685B08F94)
-[+] alloc_new(40): base(0000556685B08FBC), data(0000556685B08FD4)
-[+] alloc_new(40): base(0000556685B08FFC), data(0000556685B09014)
-[+] alloc_new(40): base(0000556685B0903C), data(0000556685B09054)
-[+] alloc_new(40): base(0000556685B0907C), data(0000556685B09094)
-[+] alloc_new(40): base(0000556685B090BC), data(0000556685B090D4)
-[+] alloc_new(40): base(0000556685B090FC), data(0000556685B09114)
-[+] alloc_new(40): base(0000556685B0913C), data(0000556685B09154)
-[+] alloc_new(40): base(0000556685B0917C), data(0000556685B09194)
-[+] alloc_new(40): base(0000556685B091BC), data(0000556685B091D4)
-[+] alloc_new(40): base(0000556685B091FC), data(0000556685B09214)
-[+] alloc_new(40): base(0000556685B0923C), data(0000556685B09254)
-[+] alloc_new(40): base(0000556685B0927C), data(0000556685B09294)
-[+] alloc_new(40): base(0000556685B092BC), data(0000556685B092D4)
-[+] alloc_new(40): base(0000556685B092FC), data(0000556685B09314)
-[+] alloc_new(40): base(0000556685B0933C), data(0000556685B09354)
-[+] alloc_new(40): base(0000556685B0937C), data(0000556685B09394)
-[+] alloc_new(40): base(0000556685B093BC), data(0000556685B093D4)
-[+] alloc_new(40): base(0000556685B093FC), data(0000556685B09414)
-[+] alloc_new(40): base(0000556685B0943C), data(0000556685B09454)
-[+] alloc_new(40): base(0000556685B0947C), data(0000556685B09494)
-[+] alloc_new(40): base(0000556685B094BC), data(0000556685B094D4)
-[+] alloc_new(40): base(0000556685B094FC), data(0000556685B09514)
-[+] alloc_new(40): base(0000556685B0953C), data(0000556685B09554)
-[+] alloc_new(40): base(0000556685B0957C), data(0000556685B09594)
-[+] alloc_new(40): base(0000556685B095BC), data(0000556685B095D4)
-[+] alloc_new(40): base(0000556685B095FC), data(0000556685B09614)
-[+] alloc_new(40): base(0000556685B0963C), data(0000556685B09654)
-[+] alloc_new(40): base(0000556685B0967C), data(0000556685B09694)
-[+] alloc_new(40): base(0000556685B096BC), data(0000556685B096D4)
-[+] alloc_new(40): base(0000556685B096FC), data(0000556685B09714)
-[+] alloc_new(40): base(0000556685B0973C), data(0000556685B09754)
-[+] alloc_new(40): base(0000556685B0977C), data(0000556685B09794)
-[+] alloc_new(40): base(0000556685B097BC), data(0000556685B097D4)
-[+] alloc_new(40): base(0000556685B097FC), data(0000556685B09814)
-[+] alloc_new(40): base(0000556685B0983C), data(0000556685B09854)
-[+] alloc_new(40): base(0000556685B0987C), data(0000556685B09894)
-[+] alloc_new(40): base(0000556685B098BC), data(0000556685B098D4)
-[+] alloc_new(40): base(0000556685B098FC), data(0000556685B09914)
-[+] alloc_new(40): base(0000556685B0993C), data(0000556685B09954)
-[+] alloc_new(40): base(0000556685B0997C), data(0000556685B09994)
-[+] alloc_new(40): base(0000556685B099BC), data(0000556685B099D4)
-[+] alloc_new(40): base(0000556685B099FC), data(0000556685B09A14)
-[+] alloc_new(40): base(0000556685B09A3C), data(0000556685B09A54)
-[+] alloc_new(40): base(0000556685B09A7C), data(0000556685B09A94)
-[+] alloc_new(40): base(0000556685B09ABC), data(0000556685B09AD4)
-[+] alloc_new(40): base(0000556685B09AFC), data(0000556685B09B14)
-[+] alloc_new(40): base(0000556685B09B3C), data(0000556685B09B54)
-[+] alloc_new(40): base(0000556685B09B7C), data(0000556685B09B94)
-[+] alloc_new(40): base(0000556685B09BBC), data(0000556685B09BD4)
-[+] alloc_new(40): base(0000556685B09BFC), data(0000556685B09C14)
-[+] alloc_new(40): base(0000556685B09C3C), data(0000556685B09C54)
-[+] alloc_new(40): base(0000556685B09C7C), data(0000556685B09C94)
-[+] alloc_new(40): base(0000556685B09CBC), data(0000556685B09CD4)
-[+] alloc_new(40): base(0000556685B09CFC), data(0000556685B09D14)
-[+] alloc_new(40): base(0000556685B09D3C), data(0000556685B09D54)
-[+] alloc_new(40): base(0000556685B09D7C), data(0000556685B09D94)
-[+] alloc_new(40): base(0000556685B09DBC), data(0000556685B09DD4)
-[+] alloc_new(40): base(0000556685B09DFC), data(0000556685B09E14)
-[+] alloc_new(40): base(0000556685B09E3C), data(0000556685B09E54)
-[+] alloc_new(40): base(0000556685B09E7C), data(0000556685B09E94)
-[+] alloc_new(40): base(0000556685B09EBC), data(0000556685B09ED4)
-[+] alloc_new(40): base(0000556685B09EFC), data(0000556685B09F14)
-[+] alloc_new(40): base(0000556685B09F3C), data(0000556685B09F54)
-[+] alloc_new(40): base(0000556685B09F7C), data(0000556685B09F94)
-[+] alloc_new(40): base(0000556685B09FBC), data(0000556685B09FD4)
-[+] alloc_new(40): base(0000556685B09FFC), data(0000556685B0A014)
-[+] alloc_new(40): base(0000556685B0A03C), data(0000556685B0A054)
-[+] alloc_new(40): base(0000556685B0A07C), data(0000556685B0A094)
-[+] alloc_new(40): base(0000556685B0A0BC), data(0000556685B0A0D4)
-[+] alloc_new(40): base(0000556685B0A0FC), data(0000556685B0A114)
-[+] alloc_new(40): base(0000556685B0A13C), data(0000556685B0A154)
-[+] alloc_new(40): base(0000556685B0A17C), data(0000556685B0A194)
-[+] alloc_new(40): base(0000556685B0A1BC), data(0000556685B0A1D4)
-[+] alloc_new(40): base(0000556685B0A1FC), data(0000556685B0A214)
-[+] alloc_new(40): base(0000556685B0A23C), data(0000556685B0A254)
-[+] alloc_new(40): base(0000556685B0A27C), data(0000556685B0A294)
-[+] alloc_new(40): base(0000556685B0A2BC), data(0000556685B0A2D4)
-[+] alloc_new(40): base(0000556685B0A2FC), data(0000556685B0A314)
-[+] alloc_new(40): base(0000556685B0A33C), data(0000556685B0A354)
-[+] alloc_new(40): base(0000556685B0A37C), data(0000556685B0A394)
-[+] alloc_new(40): base(0000556685B0A3BC), data(0000556685B0A3D4)
-[+] alloc_new(40): base(0000556685B0A3FC), data(0000556685B0A414)
-[+] alloc_new(40): base(0000556685B0A43C), data(0000556685B0A454)
-[+] alloc_new(40): base(0000556685B0A47C), data(0000556685B0A494)
-[+] alloc_new(40): base(0000556685B0A4BC), data(0000556685B0A4D4)
-[+] alloc_new(40): base(0000556685B0A4FC), data(0000556685B0A514)
-[+] alloc_new(40): base(0000556685B0A53C), data(0000556685B0A554)
-[+] alloc_new(128): base(0000556685B0A57C), data(0000556685B0A594)
-[+] alloc_new(20000): base(0000556685B0A614), data(0000556685B0A62C)
-[+] alloc_new(32): base(0000556685B0F44C), data(0000556685B0F464)
-[+] alloc_list(2/5): base(0000556685B07240), data(0000556685B07258)
-[+] alloc_new(32816): base(0000556685B0F484), data(0000556685B0F49C)
-[+] alloc_new(10): base(0000556685B174CC), data(0000556685B174E4)
-[+] alloc_new(11): base(0000556685B174EE), data(0000556685B17506)
-[+] alloc_new(7): base(0000556685B17511), data(0000556685B17529)
-[+] alloc_new(12): base(0000556685B17530), data(0000556685B17548)
-[+] alloc_new(5): base(0000556685B17554), data(0000556685B1756C)
-[+] alloc_new(14): base(0000556685B17571), data(0000556685B17589)
-[+] alloc_new(8): base(0000556685B17597), data(0000556685B175AF)
-[+] alloc_new(11): base(0000556685B175B7), data(0000556685B175CF)
-[+] alloc_new(8): base(0000556685B175DA), data(0000556685B175F2)
-[+] alloc_new(9): base(0000556685B175FA), data(0000556685B17612)
-[+] alloc_new(9): base(0000556685B1761B), data(0000556685B17633)
-[+] alloc_new(9): base(0000556685B1763C), data(0000556685B17654)
-[+] alloc_new(9): base(0000556685B1765D), data(0000556685B17675)
-[+] alloc_new(5): base(0000556685B1767E), data(0000556685B17696)
-[+] alloc_new(20): base(0000556685B1769B), data(0000556685B176B3)
-[+] alloc_new(12): base(0000556685B176C7), data(0000556685B176DF)
-[+] free(0000556685B0F49C)
+[+] alloc_list(34/39): base(0000000002609299), data(00000000026092B1)
+    max: 5052
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+10, 10[+] alloc_new(10): base(000000000260A3BC), data(000000000260A3D4)
+    max: 5094
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+56, 56[+] alloc_new(56): base(000000000260A3E6), data(000000000260A3FE)
+    max: 5182
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+56, 56[+] alloc_new(56): base(000000000260A43E), data(000000000260A456)
+    max: 5270
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+1506, 1506[+] alloc_new(1506): base(000000000260A496), data(000000000260A4AE)
+    max: 6808
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260AA98), data(000000000260AAB0)
+    max: 6880
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260AAE0), data(000000000260AAF8)
+    max: 6952
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260AB28), data(000000000260AB40)
+    max: 7024
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260AB70), data(000000000260AB88)
+    max: 7096
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260ABB8), data(000000000260ABD0)
+    max: 7168
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260AC00), data(000000000260AC18)
+    max: 7240
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260AC48), data(000000000260AC60)
+    max: 7312
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260AC90), data(000000000260ACA8)
+    max: 7384
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260ACD8), data(000000000260ACF0)
+    max: 7456
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260AD20), data(000000000260AD38)
+    max: 7528
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260AD68), data(000000000260AD80)
+    max: 7600
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260ADB0), data(000000000260ADC8)
+    max: 7672
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260ADF8), data(000000000260AE10)
+    max: 7744
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260AE40), data(000000000260AE58)
+    max: 7816
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260AE88), data(000000000260AEA0)
+    max: 7888
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260AED0), data(000000000260AEE8)
+    max: 7960
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260AF18), data(000000000260AF30)
+    max: 8032
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260AF60), data(000000000260AF78)
+    max: 8104
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260AFA8), data(000000000260AFC0)
+    max: 8176
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260AFF0), data(000000000260B008)
+    max: 8248
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B038), data(000000000260B050)
+    max: 8320
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B080), data(000000000260B098)
+    max: 8392
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B0C8), data(000000000260B0E0)
+    max: 8464
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B110), data(000000000260B128)
+    max: 8536
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B158), data(000000000260B170)
+    max: 8608
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B1A0), data(000000000260B1B8)
+    max: 8680
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B1E8), data(000000000260B200)
+    max: 8752
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B230), data(000000000260B248)
+    max: 8824
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B278), data(000000000260B290)
+    max: 8896
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B2C0), data(000000000260B2D8)
+    max: 8968
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B308), data(000000000260B320)
+    max: 9040
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B350), data(000000000260B368)
+    max: 9112
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B398), data(000000000260B3B0)
+    max: 9184
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B3E0), data(000000000260B3F8)
+    max: 9256
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B428), data(000000000260B440)
+    max: 9328
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B470), data(000000000260B488)
+    max: 9400
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B4B8), data(000000000260B4D0)
+    max: 9472
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B500), data(000000000260B518)
+    max: 9544
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B548), data(000000000260B560)
+    max: 9616
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B590), data(000000000260B5A8)
+    max: 9688
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B5D8), data(000000000260B5F0)
+    max: 9760
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B620), data(000000000260B638)
+    max: 9832
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B668), data(000000000260B680)
+    max: 9904
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B6B0), data(000000000260B6C8)
+    max: 9976
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B6F8), data(000000000260B710)
+    max: 10048
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B740), data(000000000260B758)
+    max: 10120
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B788), data(000000000260B7A0)
+    max: 10192
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B7D0), data(000000000260B7E8)
+    max: 10264
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B818), data(000000000260B830)
+    max: 10336
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B860), data(000000000260B878)
+    max: 10408
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B8A8), data(000000000260B8C0)
+    max: 10480
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B8F0), data(000000000260B908)
+    max: 10552
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B938), data(000000000260B950)
+    max: 10624
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B980), data(000000000260B998)
+    max: 10696
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260B9C8), data(000000000260B9E0)
+    max: 10768
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BA10), data(000000000260BA28)
+    max: 10840
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BA58), data(000000000260BA70)
+    max: 10912
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BAA0), data(000000000260BAB8)
+    max: 10984
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BAE8), data(000000000260BB00)
+    max: 11056
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BB30), data(000000000260BB48)
+    max: 11128
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BB78), data(000000000260BB90)
+    max: 11200
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BBC0), data(000000000260BBD8)
+    max: 11272
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BC08), data(000000000260BC20)
+    max: 11344
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BC50), data(000000000260BC68)
+    max: 11416
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BC98), data(000000000260BCB0)
+    max: 11488
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BCE0), data(000000000260BCF8)
+    max: 11560
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BD28), data(000000000260BD40)
+    max: 11632
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BD70), data(000000000260BD88)
+    max: 11704
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BDB8), data(000000000260BDD0)
+    max: 11776
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BE00), data(000000000260BE18)
+    max: 11848
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BE48), data(000000000260BE60)
+    max: 11920
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BE90), data(000000000260BEA8)
+    max: 11992
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BED8), data(000000000260BEF0)
+    max: 12064
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BF20), data(000000000260BF38)
+    max: 12136
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BF68), data(000000000260BF80)
+    max: 12208
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BFB0), data(000000000260BFC8)
+    max: 12280
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260BFF8), data(000000000260C010)
+    max: 12352
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C040), data(000000000260C058)
+    max: 12424
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C088), data(000000000260C0A0)
+    max: 12496
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C0D0), data(000000000260C0E8)
+    max: 12568
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C118), data(000000000260C130)
+    max: 12640
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C160), data(000000000260C178)
+    max: 12712
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C1A8), data(000000000260C1C0)
+    max: 12784
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C1F0), data(000000000260C208)
+    max: 12856
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C238), data(000000000260C250)
+    max: 12928
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C280), data(000000000260C298)
+    max: 13000
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C2C8), data(000000000260C2E0)
+    max: 13072
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C310), data(000000000260C328)
+    max: 13144
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C358), data(000000000260C370)
+    max: 13216
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C3A0), data(000000000260C3B8)
+    max: 13288
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C3E8), data(000000000260C400)
+    max: 13360
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C430), data(000000000260C448)
+    max: 13432
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C478), data(000000000260C490)
+    max: 13504
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C4C0), data(000000000260C4D8)
+    max: 13576
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C508), data(000000000260C520)
+    max: 13648
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C550), data(000000000260C568)
+    max: 13720
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C598), data(000000000260C5B0)
+    max: 13792
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C5E0), data(000000000260C5F8)
+    max: 13864
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C628), data(000000000260C640)
+    max: 13936
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C670), data(000000000260C688)
+    max: 14008
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C6B8), data(000000000260C6D0)
+    max: 14080
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C700), data(000000000260C718)
+    max: 14152
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C748), data(000000000260C760)
+    max: 14224
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C790), data(000000000260C7A8)
+    max: 14296
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C7D8), data(000000000260C7F0)
+    max: 14368
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C820), data(000000000260C838)
+    max: 14440
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C868), data(000000000260C880)
+    max: 14512
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C8B0), data(000000000260C8C8)
+    max: 14584
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C8F8), data(000000000260C910)
+    max: 14656
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C940), data(000000000260C958)
+    max: 14728
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C988), data(000000000260C9A0)
+    max: 14800
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+40, 40[+] alloc_new(40): base(000000000260C9D0), data(000000000260C9E8)
+    max: 14872
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+128, 128[+] alloc_new(128): base(000000000260CA18), data(000000000260CA30)
+    max: 15032
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+20000, 20000[+] alloc_new(20000): base(000000000260CAB8), data(000000000260CAD0)
+    max: 35064
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+32, 32[+] alloc_new(32): base(00000000026118F8), data(0000000002611910)
+    max: 35128
+    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+[+] alloc_list(2/5): base(0000000002609248), data(0000000002609260)
+    max: 35128
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+32816, 32816[+] alloc_new(32816): base(0000000002611938), data(0000000002611950)
+    max: 67976
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+10, 10[+] alloc_new(10): base(0000000002619988), data(00000000026199A0)
+    max: 68018
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+11, 11[+] alloc_new(11): base(00000000026199B2), data(00000000026199CA)
+    max: 68061
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+7, 7[+] alloc_new(7): base(00000000026199DD), data(00000000026199F5)
+    max: 68100
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+12, 12[+] alloc_new(12): base(0000000002619A04), data(0000000002619A1C)
+    max: 68144
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+5, 5[+] alloc_new(5): base(0000000002619A30), data(0000000002619A48)
+    max: 68181
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+14, 14[+] alloc_new(14): base(0000000002619A55), data(0000000002619A6D)
+    max: 68227
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+8, 8[+] alloc_new(8): base(0000000002619A83), data(0000000002619A9B)
+    max: 68267
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+11, 11[+] alloc_new(11): base(0000000002619AAB), data(0000000002619AC3)
+    max: 68310
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+8, 8[+] alloc_new(8): base(0000000002619AD6), data(0000000002619AEE)
+    max: 68350
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+9, 9[+] alloc_new(9): base(0000000002619AFE), data(0000000002619B16)
+    max: 68391
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+9, 9[+] alloc_new(9): base(0000000002619B27), data(0000000002619B3F)
+    max: 68432
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+9, 9[+] alloc_new(9): base(0000000002619B50), data(0000000002619B68)
+    max: 68473
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+9, 9[+] alloc_new(9): base(0000000002619B79), data(0000000002619B91)
+    max: 68514
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+5, 5[+] alloc_new(5): base(0000000002619BA2), data(0000000002619BBA)
+    max: 68551
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026096C4), block size(28), next(0000000000000000), block size2(28)
+[+] alloc_list(20/28): base(00000000026096C4), data(00000000026096DC)
+    max: 68551
+12, 12[+] alloc_new(12): base(0000000002619BC7), data(0000000002619BDF)
+    max: 68595
+[+] free(0000000002611950)
+my size(32816)prev size(32)    SEGLIST 13(~64000):
+      ->list 1: addr(0000000002611938), block size(32816), next(0000000000000000), block size2(32816)
 [+] free(0000000000000000)
-[+] alloc_list(384/384): base(0000556685B0F484), data(0000556685B0F49C)
-[+] alloc_list(768/768): base(0000556685B0F61C), data(0000556685B0F634)
-[+] alloc_list(4224/4224): base(0000556685B0F934), data(0000556685B0F94C)
-[+] alloc_list(1024/1024): base(0000556685B109CC), data(0000556685B109E4)
-[+] free(0000556685B07258)
+my size(32400)prev size(1094795585)[+] alloc_list(384/384): base(0000000002611938), data(0000000002611950)
+    max: 68595
+    SEGLIST 13(~64000):
+      ->list 1: addr(0000000002611AD8), block size(32400), next(0000000000000000), block size2(32400)
+my size(31600)prev size(1094795585)[+] alloc_list(768/768): base(0000000002611AD8), data(0000000002611AF0)
+    max: 68595
+    SEGLIST 12(~32000):
+      ->list 1: addr(0000000002611DF8), block size(31600), next(0000000000000000), block size2(31600)
+my size(27344)prev size(1094795585)[+] alloc_list(4224/4224): base(0000000002611DF8), data(0000000002611E10)
+    max: 68595
+    SEGLIST 12(~32000):
+      ->list 1: addr(0000000002612E98), block size(27344), next(0000000000000000), block size2(27344)
+my size(26288)prev size(1094795585)[+] alloc_list(1024/1024): base(0000000002612E98), data(0000000002612EB0)
+    max: 68595
+    SEGLIST 12(~32000):
+      ->list 1: addr(00000000026132B8), block size(26288), next(0000000000000000), block size2(26288)
+[+] free(0000000002609260)
+my size(5)prev size(16)    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 12(~32000):
+      ->list 1: addr(00000000026132B8), block size(26288), next(0000000000000000), block size2(26288)
 [+] free(0000000000000000)
-[+] free(0000556685B0F464)
-[+] free(0000556685B109E4)
+[+] free(0000000002611910)
+my size(32)prev size(20000)    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026118F8), block size(32), next(0000000000000000), block size2(32)
+    SEGLIST 12(~32000):
+      ->list 1: addr(00000000026132B8), block size(26288), next(0000000000000000), block size2(26288)
+[+] free(0000000002612EB0)
+my size(1024)prev size(4224)    SEGLIST 0(~8):
+      ->list 1: addr(0000000002609248), block size(5), next(0000000000000000), block size2(5)
+    SEGLIST 2(~32):
+      ->list 1: addr(00000000026118F8), block size(32), next(0000000000000000), block size2(32)
+    SEGLIST 7(~1024):
+      ->list 1: addr(0000000002612E98), block size(1024), next(0000000000000000), block size2(1024)
+    SEGLIST 12(~32000):
+      ->list 1: addr(00000000026132B8), block size(26288), next(0000000000000000), block size2(26288)
