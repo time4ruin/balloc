@@ -10,42 +10,26 @@ void check_seglist();
 void insert_seglist(size_t *tmp);
 void coalesce(size_t *ptr);
 void delete_seglist(size_t *tmp);
+int search_match_list(size_t size);
 
 unsigned int max_size;
-size_t *seglist[19];
-size_t seglist_num = 19;
-size_t seglist_size[18] = {
-    8, 16, 32, 64, 128, 256, 512, 1024, 2000,
-    4000, 8000, 16000, 32000, 64000, 128000, 256000, 512000, 1024000
-}; //list 0~17 max size declared, list 18 not declared
+size_t *seglist[35];
+size_t seglist_num = 35;
+size_t seglist_size[34] = {
+    8, 16, 24, 32, 40, 48, 64, 72, 96, 128, 192, 256, 384, 512, 768, 1024, 1536, 2048, 
+    3072, 4096, 6144, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576,
+    2097152, 4194354, 8388608, 16777216, 33554432
+}; //list 0~seglist_num max size declared, list [seglist_num] not declared
 /*
-TOTAL SIZE = BLOCKSIZE + 24
-             BLOCKSIZE 
-SEGLIST 0 :     ~8
-SEGLIST 1 :     ~16
-SEGLIST 2 :     ~32
-SEGLIST 3 :     ~64
-SEGLIST 4 :     ~128
-SEGLIST 5 :     ~256
-SEGLIST 6 :     ~512
-SEGLIST 7 :     ~1024
-SEGLIST 8 :     ~2^11
-SEGLIST 9 :     ~2^12
-SEGLIST 10:     ~2^13
-SEGLIST 11:     ~2^14
-SEGLIST 12:     ~2^15
-SEGLIST 13:     ~2^16(65536)
-SEGLIST 14:     ~2^17
-SEGLIST 15:     ~2^18
-SEGLIST 16:     ~2^19
-SEGLIST 17:     ~2^20
-SEGLIST 18:     2^20++
+TOTAL SIZE = BLOCKSIZE + 32
 */
+
 size_t hdrsize = sizeof(size_t *) + 2 * sizeof(size_t); 
 size_t prevsize = sizeof(size_t);
 size_t heapbase = 0;
 size_t heapend = 0;
-//(block size)8byte + (data size)8byte + (next)8byte
+//hdr = (block size)8byte + (data size)8byte + (next)8byte
+//footer = (prev block size)8byte
 
 void *myalloc(size_t size)
 {
@@ -53,7 +37,8 @@ void *myalloc(size_t size)
     void *p;
     size_t new_size = size + hdrsize + prevsize;
     //search seglist
-    int n = 0;
+    int n;// = search_match_list(size);
+    n = 0;
     if (size > seglist_size[seglist_num - 2]){
         n = seglist_num - 1;
     }
@@ -72,7 +57,7 @@ void *myalloc(size_t size)
     while (free_ptr != NULL){ //first fit from ascending order
         if (free_ptr[0] >= size){ //compare block size
             found = free_ptr;
-            if (free_ptr[0] >= size + hdrsize + prevsize + 8) f_split = 1; //size difference >= 8 + 32(header)
+            if (free_ptr[0] >= size + hdrsize + prevsize + seglist_size[0]) f_split = 1; //size difference >= smallest size + 32(header)
             break;
         }
         before = free_ptr;
@@ -86,7 +71,7 @@ void *myalloc(size_t size)
         while (free_ptr != NULL){ //first fit from ascending order
             if (free_ptr[0] >= size){ //compare block size
                 found = free_ptr;
-                if (free_ptr[0] >= size + hdrsize + prevsize + 8) f_split = 1; //size difference >= 8 + 32(header)
+                if (free_ptr[0] >= size + hdrsize + prevsize + seglist_size[0]) f_split = 1; //size difference >= smallest size + 32(header)
                 break;
             }
             before = free_ptr;
@@ -162,12 +147,12 @@ void *myrealloc(void *ptr, size_t size)
         return 0;   
     }
     
-    if ((new_ptr[0] > size) && (new_ptr[0] - size < hdrsize + prevsize + 8)){ 
+    if ((new_ptr[0] > size) && (new_ptr[0] - size < hdrsize + prevsize + seglist_size[0])){ 
         //smaller , block size difference < 40: just use same space
         new_ptr[1] = size;
         return &new_ptr[3];
     }
-    else if((new_ptr[0] > size) && (new_ptr[0] - size >= hdrsize + prevsize + 8)){ 
+    else if((new_ptr[0] > size) && (new_ptr[0] - size >= hdrsize + prevsize + seglist_size[0])){ 
         //smaller , block size difference >= 40: split space
         size_t *remaining = (unsigned char *)new_ptr + new_size;
         remaining[0] = new_ptr[0] - new_size;
@@ -209,7 +194,7 @@ void myfree(void *ptr) //ptr: pointing `data`
 }
 
 void check_seglist(){
-    //return;
+    return;
     size_t *tmp;
     for (int n = 0; n < seglist_num; n++){
         int i = 1;
@@ -228,6 +213,7 @@ void check_seglist(){
 void insert_seglist(size_t *tmp){ //tmp pointing the header
     //find matching seglist
     int n = 0;
+    //n = search_match_list(tmp[0]);
     if (tmp[0] > seglist_size[seglist_num - 2]){
         n = seglist_num - 1;
     }
